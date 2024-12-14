@@ -5,7 +5,6 @@ MODULE_DESCRIPTION("Lab5 Module hello2.c");
 MODULE_LICENSE("Dual BSD/GPL");
 
 static uint myParam = 1;
-// 0444 = S_IRUGO - флаг дозволу на читання параметра
 module_param(myParam, uint, 0444);
 MODULE_PARM_DESC(myParam, "My description");
 
