@@ -1,7 +1,7 @@
 #include <hello1.h>
 
 MODULE_AUTHOR("Yevhenii Holovatenko");
-MODULE_DESCRIPTION("Lab4 Module hello2.c");
+MODULE_DESCRIPTION("Lab5 Module hello2.c");
 MODULE_LICENSE("Dual BSD/GPL");
 
 static uint myParam = 1;
