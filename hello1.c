@@ -10,7 +10,6 @@ struct myStruct {
     ktime_t finishTime;
 };
 
-// статична зміна голови списку
 static LIST_HEAD(myList);
 int counter;
 
@@ -27,13 +26,11 @@ int print_hello(uint myParam)
 
     counter = 0;
     while (counter != myParam) {
-	 // Оголошення вказівника на область пам'яті, виділену під структуру, виділення блоку
- пам'яті заданого розміру
    	 struct myStruct *ptr = kmalloc(sizeof(*ptr), GFP_KERNEL); 
    	 ptr->startTime = ktime_get();
    	 pr_emerg("Hello world!\n");
    	 ptr->finishTime = ktime_get();
-   	 list_add_tail(&ptr->list, &myList);	// вставлення нового елементу в кінець списку
+   	 list_add_tail(&ptr->list, &myList);
    	 counter += 1;
     }
     return 0;
